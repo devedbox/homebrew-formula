@@ -13,6 +13,7 @@ class GitCommit < Formula
   depends_on :xcode => ["9.0", :build]
 
   def install
+    ENV["CC"] = Utils.popen_read("xcrun -find clang").chomp # rdar://40724445
     system "make", "install" # if this fails, try separate make/make install steps
   end
 
