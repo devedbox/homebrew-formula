@@ -3,10 +3,10 @@
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class GitCommit < Formula
   desc "A tool to check commit message contents of git."
-  version '0.0.1'
+  version '0.0.2'
   homepage "https://github.com/devedbox/git-commit"
   url "https://github.com/devedbox/git-commit.git",
-    :tag => '0.0.1'
+    :tag => '0.0.2'
   head "https://github.com/devedbox/git-commit.git"
 
   depends_on :xcode => "8.0"
