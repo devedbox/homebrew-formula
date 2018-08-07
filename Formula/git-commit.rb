@@ -14,7 +14,7 @@ class GitCommit < Formula
 
   def install
     ENV["CC"] = Utils.popen_read("xcrun -find clang").chomp # rdar://40724445
-    system "make", "install" # if this fails, try separate make/make install steps
+    system "make", "prefix_install", "PREFIX=#{prefix}", "TEMPORARY_FOLDER=#{buildpath}/GitCommit.dst"
   end
 
   test do
